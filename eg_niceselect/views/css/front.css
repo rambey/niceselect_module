@@ -30,9 +30,23 @@
     width: 393px !important;
     border-top: 2px solid #dcd4d4;
 }
+
+p.select-title:not(:first-child) {
+    display: none;
+}
+
+.nice-select .option.selected {
+    font-weight: initial;
+}
+.nice-select.custom-select.w-auto.open{
+    margin-bottom: 38px;
+}
 .nice-select.custom-select.w-auto.open ul {
     display: inline-flex;
     width: inherit;
+}
+.nice-select .list {
+    box-shadow: none !important; 
 }
 .nice-select:active, .nice-select.open, .nice-select:focus {
     border-color: #fff;

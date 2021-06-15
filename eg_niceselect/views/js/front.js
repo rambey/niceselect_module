@@ -46,9 +46,14 @@ $(document).ready(function() {
 	default:
 		option_0 = 'sélectionner une taille';
    }
-    $('.nice-select').prepend( "<p>"+option_0+"</p>" );
-    $('.nice-select').addClass('open');  
+    $('.nice-select').prepend( "<p class='select-title'>"+option_0+"</p>" );
+    $('.current').css('display', 'none');
     $(document).ajaxComplete(function() {
-         $('.product-variants select').niceSelect();
+        $('.product-variants select').niceSelect();
+        $('.nice-select').addClass( 'open');
+      
+        $('select').on('change', function() {
+                   $('.nice-select').prepend( "<p>"+$('.option.selected').text()+"</p>" );
+        });
     });
 });
